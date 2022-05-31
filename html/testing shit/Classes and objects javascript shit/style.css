@@ -1,0 +1,16 @@
+
+body{
+  overflow: hidden;
+}
+p{
+  font-size: 200%;
+  color: white
+}
+.kuling{
+  background-color: black;
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  left: 5%;
+  bottom: 5%;
+}

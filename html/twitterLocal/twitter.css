@@ -1,0 +1,30 @@
+
+body {
+  margin:0;
+  padding: 0;
+}
+
+* {
+
+}
+
+.left-sidebar {
+  position: absolute;
+  border: 2px solid black;
+
+}
+
+.main-bar {
+  position: absolute;
+  width: 500px;
+  height: 1000px;
+  margin-left: 500px;
+  border: 2px solid black;
+}
+
+.right-sidebar {
+  width: 500px;
+  position: absolute;
+  margin-left: 1000px;
+  border: 2px solid black;
+}

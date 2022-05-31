@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #648DE5;
+}
+
+
+fieldset {
+  margin: 2em 0;
+  padding: 1em 2em;
+  border: solid 3px white;
+  border-radius: 6px;
+  min-width: 200px;
+}
+
+legend {
+  font-size: 1.25em;
+  padding: 0.25em;
+  color: white;
+  text-shadow: 3px 3px black;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  color: white;
+  margin: 1em;
+}
+
+.checks label {
+
+  margin-top: 0;
+}
+
+
+label:first-of-type{
+  margin-top: 0;
+}
+
+input {
+  padding: 0.5em;
+  font-size: 1em;
+  font-weight: bold;
+  border: solid 1px #999;
+}
+
+
+
+
+input[type="email"], input[type="text"]{
+  width: 15em;
+  color: black;
+}
+
+textarea{
+  min-height: 8em;
+  min-width: 100%;
+  padding: .5em;
+  border: solid 1px #999;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.checks {
+  margin-bottom: 1em;
+}
+
+.checks p {
+  color: white;
+  margin-bottom: 0;
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label{
+  display: inline-block;
+  padding-top: 0;
+  margin-top: 1.5em;
+}
+
+input[type="radio"]{
+  margin-left: 1.5em;
+  margin-right: 0;
+}
+
+input[type="radio"] :first-of-type {
+    margin-left: 0;
+}
+
+input[type="submit"]{
+  padding: .5em .1em;
+  border-radius: .5em;
+  border: 3px solid white;
+  background-color: #648DE5;
+  color: white;
+  font-family: monospace;
+  font-size: 2em;
+  transition-duration: 1s;
+}
+
+input[type="submit"]:hover{
+    transform: scale(1.1);
+  	cursor: pointer;
+
+}
+
+
+
+@media screen and (min-width: 430px){
+  legend {
+    font-size: 1.75em;
+  }
+  fieldset{
+    width: 40%;
+    min-width: 320px;
+  }
+  .checks label{
+    display: inline-block;
+    padding-top: .5em;
+    margin-top: 0%;
+    margin-right: .5em;
+  }
+}

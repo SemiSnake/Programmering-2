@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Grid</title>
+  <style media="screen">
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    .item1 {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .item2 {
+      background-color: #F7CAE1;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      font-size: 30px;
+      padding: 20px;
+      text-align: center;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    .item3 {
+      background-color: #BDF7B7;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      font-size: 30px;
+      padding: 20px;
+      text-align: center;
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+
+    .item4 {
+      background-color: #FEE9E1;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      font-size: 30px;
+      padding: 20px;
+      text-align: center;
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+
+    .item5 {
+      background-color: #AE849D;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      font-size: 30px;
+      padding: 20px;
+      text-align: center;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 3;
+
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Grid element for layout på nettside</h1>
+  <p>Dere kan tenke dere grid elemeneten som bokser (divs) som dere plasserer
+    slik dere ønsker</p>
+  <p>Når dere skal definere hvordan siden ser ut starter dere med å lage en
+    grid-container, inne i denne vil informasjonen om hvor mange kolonner dere
+    ønsker å dele siden opp i og alt rundt griden som mellomrom og rammer osv</p>
+
+  <div class="grid-container">
+
+    <div class="item1">
+      <p>Her ser dere hvordan det ser ut i "body" taggen</p>
+      <img src="bilder/gridDiv.PNG" alt="">
+    </div>
+    <div class="item1">
+      <p>Slik ser det ut i "style" taggen</p>
+      <img src="bilder/container.PNG" alt="">
+    </div>
+    <div class="item1">
+      <p>Så når vi lager en grid-container så definerer vi
+        hvor mange kolonner vi ønsker på siden
+        <img src="bilder/gridTemplate.PNG" alt="" width="500px">,
+        denne kan vi endre etterhvert dersom man vil ha 4 bokser eller 5 så kan man
+        legger man på slik at man har 4 eller 5 auto.
+        Men da vil alt skifte og vi vil måtte endre alt innhold deretter så det
+        lønner seg å planlegge dette godt i forveien.</p>
+    </div>
+  </div>
+  <p>Items: dere kan lage items som dere selv bestemmer hvor store skal være,
+    på denne måten kan dere lage forskjellige størerelser på designet deres og dere
+    kan definere forskjellige "byggeklosser" som dere kan sette inn i siden i ønsket
+    størelse</p>
+
+  <div class="grid-container">
+    <div class="item1">item1</div>
+    <div class="item1">item1</div>
+    <div class="item5">item5</div>
+    <div class="item2">item2</div>
+    <div class="item1">item1</div>
+    <div class="item3">item3</div>
+    <div class="item4">item4</div>
+  </div>
+
+  <div class="grid-container">
+    <div class="item1">
+      <h1>Hvordan lage items</h1>
+      <p>Her ser dere de 5
+        forskjellige css-ene til itemene brukt ovenfor. Det er mer css for å legge
+        til farge, tekst og ramme rundt som er tatt bort for å forenkle
+        kompleksiteten når dere skal ha items som strekker seg over flere kolonner
+        blir kompleksisteten litt større og dere må passe på hvor i dokumentet dere
+        befinner dere, men dette er jo bare å prøve å feile til det blir bra.
+        <br><br> Det enkleste er å se for seg et rutenett hvor linjene rundt rutene er de
+        vi bruker når vi skal definere hvor vi starter og slutter.
+      </p>
+    </div>
+    <div class="item1">
+      <h1>Linjer i grid</h1>
+      <img src="bilder/gridLines.PNG" alt="">
+    </div>
+    <div class="item1">
+      <p><b>item1</b> trenger egentlig ikke noe definisjon av
+        størelse da den tar "standaren" som er 1x1 "rute"</p>
+      <img src="bilder/item1.PNG" alt="">
+    </div>
+    <div class="item1">
+      <p><b>item2</b> sier at den starter på 1
+        (som er helt til venstre) og skal så avslutte på 3 som er rett før siste
+        "rute"</p><img src="bilder/item2.PNG" alt="">
+    </div>
+    <div class="item1">
+      <p><b>item3</b> sier at du skal starte på 2 som er etter
+        første "rute" og skal avslutte etter 4 som er etter 3 "rute"</p>
+      <img src="bilder/item3.PNG" alt="">
+    </div>
+    <div class="item1">
+      <p><b>item4</b> sier at den skal starte på 1 og avslutte
+        på 4, dvs at den skal spanne hele raden</p><img src="bilder/item4.PNG" alt="">
+    </div>
+    <div class="item1">
+      <p><b>item5</b> skal gå over flere rader, for å gjøre
+        dette, må man legge på og definere eksakt hvor den skal plasseres. Her sier
+        jeg at den skal starte på før siste kolonne og avslutte etter denne.
+        Jeg sier også at den skal starte på første rad og avslutte etter 2 rad ved å
+        bruke linje nummer 3 (som ligger under 2 rad). Derfor spanner den over 2 rader.
+      </p><img src="bilder/item5.PNG" alt="">
+    </div>
+    <div class="item1">
+      <h1>Mellomrom</h1>
+      <p>Du kan ha mellomrom mellom rutene dine </p>
+      <img src="bilder/gridMellomrom2.PNG" alt="">
+      <p>grid-column-cap og grid-row-gap sier litt seg selv, men grid-gap er
+      begge deler satt sammen der column gap kommer først</p>
+    </div>
+    <div class="item1">
+      <img src="bilder/gridMellomrom.PNG" alt="">
+    </div>
+  </div>
+</body>
+
+</html>

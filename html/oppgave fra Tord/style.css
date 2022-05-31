@@ -1,0 +1,25 @@
+.house{
+  position: absolute;
+  left: 100px;
+  top: 50px;
+  width: 200px;
+  height: 800px;
+  background-color: red;
+}
+#window{
+  position: relative;
+  background-color: black;
+  left: 50%;
+  top: 20%;
+  width: 50%;
+  height: 10%;
+}
+.baby{
+  position: absolute;
+  background-image: url("unknown.png");
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  left: 200px;
+  top: 200px;
+}

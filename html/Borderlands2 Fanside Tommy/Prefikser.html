@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+  <html lang="en" dir="ltr">
+
+<head>
+
+
+  <meta charset="utf-8">
+  <title>Grid</title>
+  <style media="screen">
+
+
+
+  body{
+    background-color: black;
+    background-image: url("Borderlands2 background.jpg");
+    background-position: 0px -80px;
+    background-size: 1550px 872px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+
+  h1 {
+    text-align: center;
+    font-size: 150px;
+    text-shadow: 5px 5px black;
+    font-size: 100px;
+    color: #ffdd00;
+    margin: center;
+  }
+
+  p {
+    font-size: 30px;
+  }
+
+  p::first-letter {
+    font-size: 40px;
+    color: yellow;
+    text-shadow: 2px 2px black;
+  }
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #0000    //#2196;
+    padding: 0px;
+    opacity: 1x;
+  }
+
+  .item1 {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+    grid-column-start:1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+
+  .item2 {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+  }
+
+  .item3 {
+    background-color: #BDF7B7;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+  }
+
+  .item4 {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    padding: 5px;
+    color: black;
+    text-align: center;
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+
+  .item5 {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+  }
+  .item6 {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+  }
+
+  .item7 {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+    grid-column-start: 6;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  .item8 {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+
+  .item9 {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 4;
+  }
+
+  .item10 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 5;
+  }
+  .bilde {
+    width: 1450px;
+    height: 725px;
+  }
+
+  .listebilder {
+    width: 200px;
+    height: 954px;
+
+    opacity: 1;
+  }
+  </style>
+</head>
+
+
+<body>
+
+    <h1> Prefikser og våpendeler </h1>
+
+
+
+
+      <div class="grid-container">
+        <div class="item1">Pistoler:<br> <img class= "listebilder" src="Pistol våpendeler bl2.jpg"> </div>
+        <div class="item2">SMG-er: <br> <img class= "listebilder" src="SMG våpendeler bl2.jpg"></div>
+        <div class="item3"><a href="Fan side om Borderlands 2.html">Tilbake til hovedsiden</a> <br> Her ser du lister over alle mulige våpendeler på de forskjellige våpnene:</div>
+        <div class="item4">Hagler: <br> <img class= "listebilder" src="Shotgun våpendeler bl2.jpg"></div>
+        <div class="item5">Assault rifler: <br> <img class ="listebilder" src="Assault rifle våpendeler bl2.jpg"></div>
+        <div class="item6">Snipere: <br> <img class= "listebilder" src= "Sniper våpendeler bl2.jpg" ></div>
+        <div class="item7">RPG-er: <br> <img class= "listebilder" src= "Rocket launcher våpendeler.jpg"></div>
+        <div class="item8">Her kan du se alle prefiksene som er mulige for alle våpen og våpendelene de har: <br></div>
+        <div class="item9"> <img class="bilde" src="InkedWeapon prefixes bl2_LI.jpg"></div>
+        <div class="item10">Som du kan sikkert kan se, kommer "purging" prefiksen fra Vladof våpendelen.
+                            Så da vet vi at pistolen fra tidligere har en Vladof del. Alle våpen får tilfeldige
+                            våpendeler når de dropper, og da vil spillet også velge tilfeldige prefikser basert
+                            på våpendelene</div>
+      </div>
+
+
+
+
+
+
+
+
+</body>
+</html>

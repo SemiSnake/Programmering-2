@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+  <html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Grid</title>
+  <style media="screen">
+
+
+
+  body{
+    background-color: black;
+    background-image: url("Borderlands2 background.jpg");
+    background-position: 0px -80px;
+    background-size: 1550px 872px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+
+  h1 {
+    text-align: center;
+    font-size: 150px;
+    text-shadow: 5px 5px black;
+    font-size: 100px;
+    color: #ffdd00;
+    margin: center;
+  }
+
+  p {
+    font-size: 30px;
+  }
+
+  p::first-letter {
+    font-size: 40px;
+    color: yellow;
+    text-shadow: 2px 2px black;
+  }
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #0000    //#2196;
+    padding: 10px;
+    opacity: 1;
+  }
+
+  .item1 {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+
+  .item2 {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 0px;
+    font-size: 30px;
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+
+
+  .item4 {
+    background-color: #FEE9E1, 0.5;
+    border: 0px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 3;
+  }
+
+  .item5 {
+    background-color: #AE849D, 0.5;
+    border: 0px solid rgba(0, 0, 0, 0.3);
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+    grid-column-start: 6;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+  }
+  .item6 {
+    background-color: rgba(255, 255, 255, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    font-size: 30px;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+  }
+
+  .bilde {
+    width: 200px;
+    height: 200px;
+  }
+
+  .bilde2 {
+    width: 1055px;
+    height: 450px;
+
+    opacity: 1;
+  }
+  </style>
+</head>
+
+
+<body>
+
+    <h1> Borderlands 2 </h1>
+
+
+
+    <div class="grid-container">
+      <div class="item1">
+
+        <p>Borderlands 2 er et sjeldent eksempel på en god oppfølger. Spillet er ganske lik Borderlands 1,
+        men har flere gjenstander, fiender og større ferdighetstrær. Borderlands handler ganske enkelt
+        om å skyte fiender og samle nye våpen. Alle våpnene i Borderlands serien er forskjellige,
+        og de sorteres etter sjeldenhet, som går som følger:
+        "common", "uncommon", "rare", "epic", "legendary", "E-tech", "seraph", "pearlescent" og "rainbow".
+        De fleste våpnene som er sjeldnere enn "epic", har unike egenskaper.</p>
+        <img src="infinity pistol1.jpg" class="bilde2" />
+
+        <p>Dette er et bilde av ett unikt våpen som heter "purging infinity". I bilde kan du se statistikken
+        til våpenet, samtidig som ekstra informasjon nederst. Som du kanskje har lagt merke til,
+        har magasinet kun plass til 1 skudd. Men det er det unike med våpenet: det bruker ikke ammunisjon.
+
+      <!-- /* gif av våpenet her/* -->
+
+        Alle våpen i spillet har også en prefiks. Dette våpenet har prefiksen "Purging" som gir
+        Pistolen mer skade. Les mer om prefikser og våpendeler <a href="Prefikser.html"> Her </a>.
+        Våpenet har også et element. Mange av våpnene har det,
+        og alle elementene gjør ekstra skade mot en type fiende.
+        Dette våpenet for eksempel har flamme som element. Da vil det gjøre mer skade mot
+        fiender som ikke har skjold. Her er en tabell over elemeter og deres styrker.</p>
+
+        <img src="element tabell.jpg" class="bilde2" />
+
+        <p>De "vanlige" elementene er "incendary", "corrosive" og "shock". Disse elementene
+           har en ting til felles: alle gjør ekstra skade på en type livbar, og de kan påvirke
+           fienden med DOT (Damage over time) Mens "explosive" ikke gjør noe ekstra skade,
+           men hvert explosivt skudd gjør AOE "area of effect" skade, som betyr at man kan skade
+           flere fiender med ett skudd. Det siste elementet er slag, og det gjør heller ikke ekstra skade,
+           men den kan påvirke fienden med en spesiell effekt. Den effekten vil gjøre slik at den fienden
+           mottar mer skade fra alle andre kilder enn slag. Hvis du for eksempel påvirker en fiende med
+           slag, også bytter du til pistolen fra tidligere, vil pistolen gjøre mer skade på fienden.
+           Mengden med skade som økes ved hjelp av slag kommer an på vanskelighets grad.
+             </p>
+
+
+
+</div>
+      <!-- <div class="item2">Andre nettsider:<a href="Prefikser.html"> Prefikser og våpendeler<a/></div> -->
+      <div class="item5"><img src="vaultsymbol1.png" class="bilde" /></div>
+
+      <div class="item6">Fun fact: det finnes ca. 17,750,000 våpen i Borderlands 2!</div>
+
+      <div class="item4">CC Tommy Aas Hjelle <a href="Hovedside.html">om meg<a/></div>
+    </div>
+
+
+
+</body>
+</html>

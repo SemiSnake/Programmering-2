@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>Skjema1</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" href="style.css">
+  </head>
+  <body>
+    <section>
+      <form action="#" method="post">
+        <fieldset>
+          <legend> Kontakt oss </legend>
+
+          <label for="fulleNavn">Navnet ditt</label>
+          <input type="text" name="fulleNavn" id ="fulleNavn">
+
+          <label for="email">Email:</label>
+          <input type="email" name="email" id ="email">
+
+          <label for="telefon">Telefon nummer:</label>
+          <input type="tel" name="telefon" id ="telefon">
+
+          <label for="msg">Din melding:</label>
+          <textarea name="msg" id ="msg"></textarea>
+
+          <div class ="checks">
+            <input type="checkbox" name="kopierEmail" id="kopierEmail">
+            <label for="kopierEmail">Send kopi til min Epost:</label>
+          </div>
+
+          <div class= "checks">
+            <p> foretrekket måte for kontakt: </p>
+
+            <input type="radio" name="kontakt" id="kontaktEmail" value ="email">
+            <label for="kontaktEmail">Email</label>
+
+            <input type="radio" name="kontakt" id="kontaktTelefon" value ="telefon">
+            <label for="kontaktTelefon">Telefon</label>
+
+            <input type="radio" name="kontakt" id="kontaktText" value ="email">
+            <label for="kontaktEmail">Melding</label>
+
+          </div>
+
+          <input type="submit" id="submit" value="Kontakt Oss">
+        </fieldset>
+  </body>
+</html>

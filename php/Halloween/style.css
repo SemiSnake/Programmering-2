@@ -1,0 +1,299 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+:root {
+	--white:#f1f1f1
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  background-image: url("Bilder/red-eyes-kul.gif");
+	overflow: auto;
+}
+
+h1 {
+  font-family: 'Lacquer', cursive;
+  font-size: 100px;
+  color: black;
+  text-shadow: 2px 2px orange;
+}
+
+h2 {
+	text-align: center;
+}
+
+.bilde {
+	height: 40px;
+	width: 40px;
+	float: right;
+	position: relative;
+	position: -webkit-sticky;
+	position: sticky;
+  top: 0px;
+	right: 1810px;
+	z-index: 4;
+	animation: move1 5s infinite;
+}
+
+.bilde2 {
+	height: 100px;
+	width: 100px;
+	margin-left: 0%;
+	margin-right: 5%;
+	cursor: pointer;
+}
+
+.bilde3 {
+	height: 100px;
+	width: 200px;
+	margin-left: 0%;
+	margin-right: 5%;
+	cursor: pointer;
+
+}
+#menykonteiner {
+
+	  background-color: Orange;
+		text-align: right;
+		margin-top: 0px;
+		height: 40px;
+		border: 2px solid purple;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		z-index: 3;
+
+}
+
+#menykonteiner2 {
+		background-color: black;
+		text-align: left;
+		margin-bottom: 10px;
+		height: 100px;
+		border: 5px solid black;
+		color: white;
+}
+
+#menykonteiner3 {
+		position: relative;
+		background-color: purple;
+		text-align: right;
+		width: 900px;
+		right: 25px;
+		height: 80px;
+		border: 5px solid black;
+		display: flex;
+}
+
+
+#I {
+	opacity: 1;
+	animation: flickerI 3s linear  reverse infinite;
+}
+
+
+#I::after {
+	content: '';
+	width: 150%;
+
+}
+
+@keyframes move1 {
+	0% {right: 1810px;}
+	50% {right: 800px;}
+	100% {right: 1810px;}x
+}
+
+@keyframes flickerI {
+	0% {
+		opacity: 0.2;
+	}
+	5% {
+		opacity: 0.3;
+	}
+	10% {
+		opacity: 0.4;
+	}
+	15% {
+		opacity: 0.55;
+	}
+	25% {
+		opacity: 0.4;
+	}
+	30% {
+		opacity: 0.7;
+	}
+	35% {
+		opacity: 0.5;
+	}
+	40% {
+		opacity: 0.4;
+	}
+	45% {
+		opacity: 0.3;
+	}
+	60% {
+		opacity: 0.5;
+	}
+	70% {
+		opacity: 0.6;
+	}
+	80% {
+		opacity: 0.5;
+	}
+	90% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 0.2;
+	}
+}
+
+
+ .p{
+   color: orange;
+
+ }
+ .p2{
+   color: black;
+
+ }
+
+ .p3{
+   font-family: 'Lacquer', cursive;
+   font-size: 100px;
+   color: black;
+ }
+
+.p4{
+	text-align: left;
+	font-family: 'Henny Penny', cursive;
+
+}
+
+.grid-container {
+	z-index: 1;
+  display: grid;
+  border: 6px solid Black;
+  grid-template-columns: auto auto auto;
+  background-color: #FF9A00;
+  padding: 19px;
+  margin-left: 15%;
+  margin-right: 25%;
+}
+
+.item1 {
+
+  border-bottom: 0px solid black;
+  padding: 0px;
+	margin: -20px;
+  font-size: 30px;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.item2 {
+	position: relative;
+	color: orange;
+	width: 240px;
+	height: 60px;
+	border-right: 25px solid black;
+	border-left: 25px solid black;
+  font-size: 20px;
+	padding: 10px;
+
+
+}
+
+.item3 {
+
+
+  font-size: 30px;
+  padding: 10px;
+	margin-left: -20px;
+	margin-right: -20px;
+  text-align: left;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.item4 {
+	background-color: #99CC99;
+	border: 10px solid black;
+	padding: 10px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+	grid-row-start: 5;
+	grid-row-end: 6;
+	z-index: 2;
+}
+
+.item5 {
+  background-color: #AE849D;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+}
+
+.button {
+	font-size: 16px;
+	transition-duration: 0.4s;
+  background-color: orange;
+  color: black;
+	cursor: pointer;
+
+
+}
+
+.button1 {
+	text-align: center;
+	padding: 3px;
+	margin-top: 5px;
+	margin-left: 2%;
+	margin-right: 3%;
+	border: 2px solid white;
+	width: 100px;
+
+	cursor: pointer;
+
+}
+.button2 {
+	text-align: center;
+	position: relative;
+	padding: 3px;
+	margin-right: 18px;
+	border: 2px solid white;
+	width: 200px;
+	height: 50px;
+	cursor: pointer;
+
+	font-size: 16px;
+	margin-top: -28px;
+	transition-duration: 0.4s;
+	background-color: black;
+	color: black;
+	cursor: pointer;
+}
+
+.button1:hover{
+  background-color: black;
+  color: Orange;
+	transform: scale(1.2);
+}
+
+.button2:hover{
+  background-color: black;
+  color: red;
+}

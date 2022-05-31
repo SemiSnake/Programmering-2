@@ -1,0 +1,194 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.header{
+  min-height: 1vh;
+  width:100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.header nav{
+  background-color: #006A52;
+  box-shadow: 0px 4px 5px -2px black;
+}
+
+
+nav{
+  display: flex;
+  padding: 1% 2%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  width: 300px;
+}
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 22px;
+  position: relative;
+}
+.nav-links ul li a{
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #009775;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+  width: 100%
+}
+body{
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+p{
+font-size: 200%;
+
+}
+p1{
+font-size: 200%;
+}
+
+p2{
+color: white;
+}
+
+p3{
+font-size: 200%;
+}
+p4{
+font-size: 200%;
+}
+
+h1{
+  text-align: center;
+  font-size: 300%;
+}
+
+.sliderDiv{
+  position: absolute;
+  background-color: white;
+  border: 2px solid red;
+  height: 10%;
+  width: 27%;
+  right: 0%;
+  top: 20%;
+}
+
+#slider1{
+  position: absolute;
+  left: 30%;
+  width: 50%;
+  bottom:0;
+}
+
+.textArea{
+  position: absolute;
+  width: 50vmax;
+  top: 138px;
+  max-height: 100vmax;
+  left: 22vmax;
+  height: 90vmax;
+  border-left: 5px solid purple;
+  border-right: 5px solid purple;
+  background-color: grey;
+  overflow-y: scroll;
+}
+
+.footer{
+  position: absolute;
+  left: 0;
+  height: 10vmax;
+  width: 100%;
+  background-color: grey;
+  margin-bottom: 0;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#game{
+  position: sticky;
+  width: 800px;
+  height: 400px;
+  top:90px;
+  left:0px;
+  border-right: 10px solid black;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  background-color: #006A52;
+}
+#player{
+  position: absolute;
+  top: 350px;
+  left: 0;
+  height: 50px;
+  width: 100px;
+}
+.playerAnimate{
+    animation: playerJump 500ms infinite;
+}
+@keyframes playerJump{
+  0%{top:350px; }
+  30%{top: 300px; }
+  70%{top: 300px; }
+  100%{top: 350px; }
+}
+#block{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../Bilder/Papirikon.png");
+  top: 330px;
+  left: 780px;
+
+}
+@keyframes blockMove {
+  from{left: 780px;}
+  to{left:0px;}
+}
