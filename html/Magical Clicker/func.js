@@ -423,18 +423,12 @@ function js(){
      if(enemyIsAlive == true && playerIsAlive == true ){
        if (playerCurrentHP > 0 && playerCurrentHP - totalEnemyAttack >= 0){
          playerCurrentHP -= Math.round(totalEnemyAttack);
-         if(consoleFightOutput.length > 13){
-            consoleFightOutput.shift();
-         }
          consoleFightOutput.push("<br> <p style = 'color: red'>" + enemyName + " hit you for " + totalEnemyAttack + " damage!</p>");
 
        } else if (playerCurrentHP > 0 && playerCurrentHP - totalEnemyAttack < 0 || playerCurrentHP == 0){
          playerCurrentHP = 0;
        }
        if(playerCurrentHP == 0){
-         if(consoleFightOutput.length > 13){
-           consoleFightOutput.shift()
-         }
          playerIsAlive = false;
          consoleFightOutput.push("<br>you are dead as HECK!");
          reviveDivEl.style.display ="block";
@@ -443,7 +437,7 @@ function js(){
    }
 
   function frameUpdate(){
-    if(consoleFightOutput.length > 13){
+    if(consoleFightOutput.length > 16){
      consoleFightOutput.shift();
    }
    if(enemyHP <= 0 && enemyIsAlive == true){
@@ -458,7 +452,6 @@ function js(){
 
     /*-----------------------UNSORTED ---------------------------------------*/
     consoleOutputEl.innerHTML = consoleFightOutput;
-
     totalEnemyMaxHPEl.innerHTML = totalEnemyMaxHP;
     totalEnemyMaxHPEl2.innerHTML = totalEnemyMaxHP;
     maxManaEl.innerHTML = maxMana;
@@ -752,7 +745,7 @@ function enemyRespawn(changeLevel){
          if(enemyRandomizer == 1){
            enemyName = "Nisse";
            enemyEl.style.display = "block";
-           enemyEl.src ="Bilder/EM_goblin_1.png";
+           enemyEl.src ="Bilder/EM_goblin_2.png";
          }else if(enemyRandomizer == 2){
            enemyName = "Angry eagle";
            enemyEl.style.display = "block";
@@ -764,7 +757,7 @@ function enemyRespawn(changeLevel){
          }else if(enemyRandomizer == 4){
            enemyName = "Forest spirit";
            enemyEl.style.display = "block";
-           enemyEl.src ="Bilder/EM_goblin_1.png";
+           enemyEl.src ="Bilder/EM_goblin_2.png";
          }else if(enemyRandomizer == 5){
            enemyName = "Angry man";
            enemyEl.style.display = "block";
@@ -776,7 +769,7 @@ function enemyRespawn(changeLevel){
          }else if(enemyRandomizer == 7){
            enemyName = "Tree demon";
            enemyEl.style.display = "block";
-           enemyEl.src ="Bilder/EM_goblin_1.png";
+           enemyEl.src ="Bilder/EM_goblin_2.png";
          }else if(enemyRandomizer == 8){
            enemyName = "Dryad";
            enemyEl.style.display = "block";

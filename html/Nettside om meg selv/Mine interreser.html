@@ -5,130 +5,15 @@
   <head>
     <title> Om Tommy </title>
     <meta charset="utf-8"/>
-
-
-    <style>
-
-
-    body {
-      background-color: Black;
-    }
-
-    h1 {
-      display: flex;
-      justify-content: center;
-      font-size: 60pt;
-      color: white;
-      text-shadow: 3px 3px red;
-
-      font-family: Arial Black;
-      text-align: center;
-      border-bottom: 5px solid red;
-    }
-
-    span::before {
-        content: "Kul";
-        animation: animate infinite 3s;
-        padding-left: 40px;
-    }
-
-    @keyframes animate {
-
-        0% {
-            content: "Kul";
-        }
-
-        25% {
-            content: "Kjekk";
-        }
-        50%{
-          content: "Morsom"
-        }
-        75% {
-            content: "Kul";
-        }
-    }
-
-    .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-    }
-
-    h2 {
-      font-size: 30pt;
-      color: white;
-      text-shadow: 3px 3px red;
-      font-family: Arial Black;
-      text-align: center;
-
-    }
-
-    p {
-      font size 20pt;
-      margin:auto;
-      color: white;
-      font-family: Arial Black;
-      text align: center;
-      border: 2px solid red;
-      width: 60%;
-    }
-
-
-    p:first-letter {
-
-
-    }
-    #menykonteiner {
-      background-color: black;
-        text-align: center;
-        border: 2px solid red;
-        width: 60%;
-        margin: auto;
-    }
-
-    #menykonteiner li {
-      display: inline;
-      margin-right: 15px;
-      margin-left: 15px;
-
-    }
-
-    #menykonteiner a {
-      color: white;
-      font-size: 20pt;
-      text-decoration: none;
-
-    }
-
-    #menykonteiner a:hover {
-      color:red;
-      font-size 100%;
-      text-decoration: none;
-    }
-
-    .detteNettstedet{
-      font-size: 20px;
-      text-shadow: 2px 2px red;
-    }
-
-    .bilde {
-      width: 800px;
-      height: 400px;
-    }
-
-
-
-    </style>
+    <link rel="stylesheet" href="css/main.css">
   </head>
 
   <body>
-    <h1>  Tommy er  <span> </span> </h1>
+    <h1>  Tommy er  <span id="anim"> </span> </h1>
     <div id ="konteiner">
       <nav id="menykonteiner">
           <ul>
-              <li><a href="Hovedside.html">Om meg</a></li>
+              <li><a href="index.html">Om meg</a></li>
               <li class="detteNettstedet"><a href="Mine interreser.html">Mine interreser</a></li>
               <li><a href="Portefølje.html">Min Portefølje</a></li>
               <li><a href="Sosiale medier.html">Sosiale medier</a></li>
@@ -144,7 +29,7 @@
             fordi jeg har lyst til å bli en spillutvikler, og da er det viktig å vite
             hvorfor gode spill er bra. Det er mye som kreves for å lage ett helt spill
             fra scratch, men jeg syntes at programmering er veldig gøy, så jeg er
-            villig til å bruke mye tid på det.<img src="LOZ BOTW 1.jpg" alt="Bilde" class="bilde center" />
+            villig til å bruke mye tid på det.<img src="medier/LOZ BOTW 1.jpg" alt="Bilde" class="bilde center" />
 
   </body>
 </html>

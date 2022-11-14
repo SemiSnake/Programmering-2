@@ -1,12 +1,14 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
-:root {
-	--white:#f1f1f1
+/*@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');*/
+@font-face {
+    font-family: '8bit';
+    src: url('PressStart2p.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
 	margin: 0;
-	background-image: url("Bilder/backgroundImageForest1.jpg");
+	font-family: '8bit';
 	background-color: black;
   background-repeat: no-repeat;
 	user-select: none;
@@ -164,7 +166,7 @@ p {
 	margin-top: 1%;
 	display: inline;
 	pointer-events: none;
-	font-size: 0.9vmax;
+	font-size: 0.7vmax;
 }
 p3 {
 	color: white;
@@ -781,6 +783,7 @@ p5 {
 	text-align: center;
 	position: absolute;
 	bottom:0;
+  overflow-y: scroll;
 }
 
 .enemyHPBarDiv{

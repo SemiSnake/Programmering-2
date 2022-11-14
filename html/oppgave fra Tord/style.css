@@ -1,3 +1,10 @@
+body{
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top;
+}
+
+
 .house{
   position: absolute;
   left: 100px;
@@ -16,10 +23,8 @@
 }
 .baby{
   position: absolute;
-  background-image: url("unknown.png");
+  background-image: url("baby1.png");
   width: 100px;
   height: 100px;
   background-size: cover;
-  left: 200px;
-  top: 200px;
 }

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Julekalender 2021</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&family=Snowburst+One&display=swap');
+
+    </style>
+  </head>
+
+
+
+  <body>
+
+    <div class ="overlay">
+
+    </div>
+    <script>
+    // Setter datoen vi skal telle ned til
+
+    </script>
+
+
+
+
+
+      <nav id="menykonteiner1">
+            <h1>Julekalender 2021 </h1>
+      </nav>
+          <p2 id="demo"></p2>
+     <div class="grid-container">
+       <div class="item1"id="luke1"><p> 1.</p></div>
+       <div class="item1"id="luke2"><p> 2.</p></div>
+       <div class="item1"id="luke3"><p> 3.</p></div>
+       <div class="item1"id="luke4"><p> 4.</p></div>
+       <div class="item1"id="luke5"><p> 5.</p></div>
+       <div class="item1"id="luke6"><p> 6.</p></div>
+       <div class="item1"id="luke7"><p> 7.</p></div>
+       <div class="item1"id="luke8"><p> 8.</p></div>
+       <div class="item1"id="luke9"><p> 9.</p></div>
+       <div class="item1"id="luke10"><p> 10.</p></div>
+       <div class="item1"id="luke11"><p> 11.</p></div>
+       <div class="item1"id="luke12"><p> 12.</p></div>
+       <div class="item1"id="luke13"><p> 13.</p></div>
+       <div class="item1"id="luke14"><p> 14.</p></div>
+       <div class="item1"id="luke15"><p> 15.</p></div>
+       <div class="item1"id="luke16"><p> 16.</p></div>
+       <div class="item1"id="luke17"><p> 17.</p></div>
+       <div class="item1"id="luke18"><p> 18.</p></div>
+       <div class="item1"id="luke19"><p> 19.</p></div>
+       <div class="item1"id="luke20"><p> 20.</p></div>
+       <div class="item1"id="luke21"><p> 21.</p></div>
+       <div class="item1"id="luke22"><p> 22.</p></div>
+       <div class="item1"id="luke23"><p> 23.</p></div>
+       <div class="item1"id="luke24"><p> 24.</p></div>
+     </div>
+     <div class ="footer">
+       <h2> &copy;  Laget av Tommy Aas Hjelle</h2>
+     </div>
+
+     <img class= "julehatt" src="Bilder/julehatt.png">
+     <div class ="content"></div>
+
+     <script type="text/javascript">
+      let bodyEl = document.querySelector("body");
+      let contentEl = document.querySelector(".content");
+      let contentOverlay = document.querySelector(".overlay");
+      let contentPic = document.querySelector(".julehatt");
+      console.log(bodyEl);
+      bodyEl.addEventList ener("click", clickEvent);
+
+      function clickEvent (e){
+
+        console.log(e.target.id);
+
+
+
+        const currentDay = new Date();
+        let today = currentDay.getDate();
+        let dagensDato = currentDay.getMonth() + 1;
+
+
+      if (dagensDato == 12){
+
+      //luke1//
+        if (e.target.id == "luke1"){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentPic.style.display ="flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/embed/9lg5h3xLKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        }
+        //luke2//
+        else if(e.target.id == "luke2"){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<img width="1350px" height="700px" src="Bilder/Julebilde1.jpg">';
+          contentPic.style.display ="flex";
+        }
+        //luke3//
+        else if(e.target.id == "luke3"){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<p3>Her er en liten fun fact: Du er unik, og ingen kan ta det fra deg!</p3>';
+          contentPic.style.display ="flex";
+        }
+        //luke4//
+        else if(e.target.id == "luke4"){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<img width="1350px" height="700px" src="Bilder/juleGif.gif">';
+          contentPic.style.display ="flex";
+        }
+        //luke5//
+        else if(e.target.id == "luke5"){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<p3> Tenn lys ! Et lys skal brenne for denne lille jord. Den blanke himmelstjerne, der vi og alle bor. Må alle dele håpet så gode ting kan skje. Må jord og himmel møtes. Et lys er tent for det </p3>';
+          contentPic.style.display ="flex";
+        }
+        //luke6//
+        else if(e.target.id == "luke6"){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<p3> Den 6. desember 1917 erklærte Finland sin uavhengighet fra Russland. </p3>';
+          contentPic.style.display ="flex";
+        }
+        //luke7//
+        else if(e.target.id == "luke7"){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<img width="1350px" height="700px" src="Bilder/juleBilde2.jpg">';
+          contentPic.style.display ="flex";
+        }
+        //luke8//
+        else if(e.target.id == "luke8"){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/embed/9lg5h3xLKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+        //luke9//
+        else if(e.target.id == "luke9"){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/embed/9lg5h3xLKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+        //luke10//
+        else if(e.target.id == "luke10" && today >= 10 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/embed/9lg5h3xLKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+        //luke11//
+        else if(e.target.id == "luke11" && today >= 11 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/embed/9lg5h3xLKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+        //luke12//
+        else if(e.target.id == "luke12" && today >= 12 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<p3>Tenn lys ! To lys skal skinne for kjærlighet og tro, for dem som viser omsorg og alltid bygger bro. Må fanger få sin frihet og flyktninger et hjem. Tenn lys for dem som gråter og dem som trøster dem.</p3>';
+          contentPic.style.display ="flex";
+        }
+        //luke13//
+        else if(e.target.id == "luke13" && today >= 13 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<img width="1350px" height="700px" src="Bilder/santaLucia.jpg">';
+          contentPic.style.display ="flex";
+        }
+        //luke14//
+        else if(e.target.id == "luke14" && today >= 14 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/embed/9lg5h3xLKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+        //luke15//
+        else if(e.target.id == "luke15" && today >= 15 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/embed/9lg5h3xLKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+        //luke16//
+        else if(e.target.id == "luke16" && today >= 16 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/embed/9lg5h3xLKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+        //luke17//
+        else if(e.target.id == "luke17" && today >= 17 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/embed/9lg5h3xLKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+        //luke18//
+        else if(e.target.id == "luke18" && today >= 18 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/embed/9lg5h3xLKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+        //luke19//
+        else if(e.target.id == "luke19" && today >= 19 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<p3>Tenn lys! Tre lys skal flamme for alle som må sloss. For rettferd og for frihet. De trenger hjelp av oss. Må ingen miste motet før alle folk er ett. Tenn lys for dem som kjemper for frihet og for rett. </p3>';
+          contentPic.style.display ="flex";
+        }
+        //luke20//
+        else if(e.target.id == "luke20" && today >= 20 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/embed/9lg5h3xLKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+        //luke21//
+        else if(e.target.id == "luke21" && today >= 21 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/embed/9lg5h3xLKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+        //luke22//
+        else if(e.target.id == "luke22" && today >= 22 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/embed/9lg5h3xLKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+        //luke23//
+        else if(e.target.id == "luke23" && today >= 23 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/watch?v=a9wPnv9YZPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+        //luke24//
+        else if(e.target.id == "luke24" && today >= 24 ){
+          console.log(e.target.id);
+          contentEl.style.display = "flex";
+          contentOverlay.style.display = "flex";
+          contentEl.innerHTML = '<iframe width="1350px" height="700px" src="https://www.youtube.com/watch?v=BacOAA72N5I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          contentPic.style.display ="flex";
+        }
+
+
+        else {
+          contentEl.style.display = "none";
+          contentOverlay.style.display = "none";
+          contentPic.style.display ="none"
+        }
+      }
+      else {
+        alert("Det er ikke desember!!!")
+      }
+
+}
+     </script>
+  </body>
+</html>

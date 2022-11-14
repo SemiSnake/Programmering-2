@@ -5,10 +5,6 @@
     <title>Magical clicker</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="img/png" href="Bilder/GameLogo.png" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&family=Snowburst+One&display=swap');
-
-    </style>
   </head>
 
   <body>
@@ -26,7 +22,7 @@
           <div onclick ="gameStart()" class ="startButton"><p4 style="font-size: 520%; left: 5%;">START</p4>
         </div></div>
       <div onclick ="headerMenuChanger(event)" class ="overlay" id ="overlay"></div>
-      <div id= "reviveDiv"><p> Oh no... You just died! Press this button to revive:</p><div onclick ="playerRevive()" id="reviveButton"><p4 style="font-size: 3.5vmax;">Revive</p4></div></div>
+      <div id= "reviveDiv"><p> Oh no... You just died! Press this button to revive:</p><div onclick ="playerRevive()" id="reviveButton"><p4 style=" position: absolute; top: 40%; left: 10%;font-size: 1.5vmax;">Revive</p4></div></div>
       <div class ="upgrades">
       <h3>Upgrades:</h3>
       <div class ="upgrades1">
@@ -78,8 +74,8 @@
     </div>
 
 <p style ="font-size: 1.6vmax; position: absolute; left: 42%; top: 6%; z-index: 2; pointer-events: none;">Current level:<span id ="currentLevelText"> 1</span>/<span id ="maxLevel">1</span></p>
-<div onclick = "levelDecrease()" id ="previousLevelButton"><img class ="nextLevelButtonImage" src ="Bilder/shopOpenerImage.png"></img></div>
-<div onclick = "levelIncrease()" id ="nextLevelButton"><img style="transform: scaleX(-1)" class ="nextLevelButtonImage" src="Bilder/shopOpenerImage.png"></img></div>
+<div onclick = "levelDecrease()" id ="previousLevelButton"><img class ="nextLevelButtonImage" src ="Bilder/Arrow_2.png"></img></div>
+<div onclick = "levelIncrease()" id ="nextLevelButton"><img style="transform: scaleX(-1)" class ="nextLevelButtonImage" src="Bilder/Arrow_2.png"></img></div>
 
     <div class ="enemyHPBarDiv" id ="enemyHPBarDiv">
       <span class ="enemyHP2" id ="enemyHP2"></span><span class ="enemyHP2">/</span><span class ="enemyHP2" id ="enemyMaxHP2"></span>
@@ -88,7 +84,7 @@
     <div class ="enemyCanvas"><img onclick ="enemyHit();" draggable="false" src ="Bilder/EM_goblin_1.png" alt ="" class ="enemyPortrait" id ="enemy"></div>
 
 <div id ="shopDiv">
-    <div onclick ="shopOpenClose()" id ="shopOpener"><img draggable="false" onclick="shopOpenClose()" src ="Bilder/shopOpenerImage.png" alt ="" id ="shopOpenerImage"/></div>
+    <div onclick ="shopOpenClose()" id ="shopOpener"><img draggable="false" onclick="shopOpenClose()" src ="Bilder/Arrow_2.png" alt ="" id ="shopOpenerImage"/></div>
      <div id ="shop">
        <h2 style="font-size: 4em; right: 10%;"> Shop:</h2>
        <div onclick ="shopTypeChanger(event)" id ="shopTypeSelector">
@@ -171,7 +167,7 @@
               <img onclick ="orbClick()" draggable="false" src="Bilder/Orb1.png" alt="" class="orb" id ="orb"/>
 
     <div id ="spellDiv">
-      <div onclick="spellOpenClose()" id ="spellOpener"><img draggable="false" onclick="spellOpenClose()" src ="Bilder/shopOpenerImage.png" alt ="" id ="spellOpenerImage"/></div>
+      <div onclick="spellOpenClose()" id ="spellOpener"><img draggable="false" onclick="spellOpenClose()" src ="Bilder/Arrow_2.png" alt ="" id ="spellOpenerImage"/></div>
       <div id ="spells">
         <h2 style = "font-size: 4em; right: 6%"> Spells:</h2>
         <div onclick ="spellItem1.cast()" class ="spellItem"><p style ="z-index: 2">Wind Current: Strike with the wind!<br>Damage: <span id="spellItem1Effect">150% of mana + 10</span><span id="spellItem1Cost"></span></p><div id ="spellItem1Wrapper" class ="spellItemWrapper" style ="background-color: rgba(255,0,0,0.5);"></div></div>

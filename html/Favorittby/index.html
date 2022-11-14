@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    Favoritt by:<input type="text" name="by" value="by" id ="by"></input><br>
+    <button type="button" name="button" id ="button" onclick = "nyby()">Send inn</button>
+    <ul id ="ul">
+
+    </ul>
+  </body>
+  <script>
+    var ulist = document.getElementById("ul");
+    var i = 0;
+    function nyby()
+    {
+      i++;
+      var input = document.getElementById('by');
+      const listItem = document.createElement("li");
+      const text = input.value;
+      ulist.appendChild(listItem);
+      var text2 = document.createTextNode(i + ". " + text);
+
+      listItem.appendChild(text2);
+    }
+  </script>
+</html>

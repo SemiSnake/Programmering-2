@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Magical clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="img/png" href="Bilder/GameLogo.png" />
+  </head>
+
+  <body>
+  <script type="text/javascript" src="func.js"></script>
+  <div class="loadingDiv" id ="loadingDiv"><span class ="loading">LOADING</span></div>
+
+      <audio id="startMusic" src="Musikk/main_theme_tommy_land.wav"></audio>
+      <div class ="startingDiv" id="startingDiv">
+        <div class ="tutorialDiv">
+        <div id ="page1"><h id="tutorialHeader"></h><br><br><p id ="tutorialParagraph"></p></div>
+        <div id ="previousPageButton" onclick ="previousPage()"><p>Previous page</p></div>
+        <p style = "position: absolute; bottom:0; font-size: 200%;"><span id="currentPage">1</span><span id ="maxTutorialPage"></span></p>
+        <div id ="nextPageButton" onclick ="nextPage()"><p>Next page</p></div>
+        </div>
+          <div onclick ="gameStart()" class ="startButton"><p4 style="font-size: 520%; left: 5%;">START</p4>
+        </div></div>
+      <div onclick ="headerMenuChanger(event)" class ="overlay" id ="overlay"></div>
+      <div id= "reviveDiv"><p> Oh no... You just died! Press this button to revive:</p><div onclick ="playerRevive()" id="reviveButton"><p4 style=" position: absolute; top: 40%; left: 10%;font-size: 1.5vmax;">Revive</p4></div></div>
+      <div class ="upgrades">
+      <h3>Upgrades:</h3>
+      <div class ="upgrades1">
+      <div class ="upgradeItem" id ="upgradeItem1"><span class ="manaShopText"> WIP</span></div>
+      <div class ="upgradeItem" id ="upgradeItem2"><span class ="manaShopText"> WIP</span></div>
+      <div class ="upgradeItem" id ="upgradeItem3"><span class ="manaShopText"> WIP</span></div>
+      <div class ="upgradeItem" id ="upgradeItem4"><span class ="manaShopText"> WIP</span></div>
+      <div class ="upgradeItem" id ="upgradeItem5"><span class ="manaShopText"> WIP</span></div>
+      <div class ="upgradeItem" id ="upgradeItem6"><span class ="manaShopText"> WIP</span></div>
+      <div class ="upgradeItem" id ="upgradeItem7"><span class ="manaShopText"> WIP</span></div>
+      <div class ="upgradeItem" id ="upgradeItem8"><span class ="manaShopText"> WIP</span></div>
+      <div class ="upgradeItem" id ="upgradeItem9"><span class ="manaShopText"> WIP</span></div>
+      <div class ="upgradeItem" id ="upgradeItem10"><span class ="manaShopText"> WIP</span></div>
+      <div class ="upgradeItem" id ="upgradeItem11"><span class ="manaShopText"> WIP</span></div>
+      <div class ="upgradeItem" id ="upgradeItem12"><span class ="manaShopText"> WIP</span></div>
+      </div>
+    </div>
+
+    <div class ="rebirthCanvas">
+      <h3>Rebirth:<h3>
+    </div>
+    <div class ="skillTreeCanvas">
+      <h3>Skill Tree:</h3>
+    </div>
+
+
+
+    <div onclick="headerMenuChanger(event)" id ="konteiner">
+      <nav id="menykonteiner">
+          <ul>
+            <li><a id = "upgradesText">WIP</a></li>
+            <li><a id ="rebirthText">WIP</a></li>
+            <li><a id ="skillTreeText">WIP</a></li>
+            <li><a id = "Achievements">WIP</a></li>
+            <li><a id = "Stats">WIP</a></li>
+            <li><a id = "Tutorial">Tutorial</a></li>
+          </ul>
+      </nav>
+    </div>
+
+
+
+
+    <div class ="manaDiv">
+      <p4 style="z-index: 1;" id ="mana">Mana: <br><p4 style= "font-size: 1.6vmax" id = "manaShow"></p4>/<p4 style ="font-size: 1.6vmax" id ="maxMana"></p4></p4><div id ="manaDivBar"></div>
+    </div>
+    <div class ="goldDiv">
+      <p4 id ="gold">Gold: <br> <p4 style ="font-size: 1.6vmax" id = "goldShow"></p4>
+    </div>
+
+<p style ="font-size: 1.6vmax; position: absolute; left: 42%; top: 6%; z-index: 2; pointer-events: none;">Current level:<span id ="currentLevelText"> 1</span>/<span id ="maxLevel">1</span></p>
+<div onclick = "levelDecrease()" id ="previousLevelButton"><img class ="nextLevelButtonImage" src ="Bilder/Arrow_2.png"></img></div>
+<div onclick = "levelIncrease()" id ="nextLevelButton"><img style="transform: scaleX(-1)" class ="nextLevelButtonImage" src="Bilder/Arrow_2.png"></img></div>
+
+    <div class ="enemyHPBarDiv" id ="enemyHPBarDiv">
+      <span class ="enemyHP2" id ="enemyHP2"></span><span class ="enemyHP2">/</span><span class ="enemyHP2" id ="enemyMaxHP2"></span>
+      <div class="enemyHPBar" id ="enemyHPBar"></div>
+    </div>
+    <div class ="enemyCanvas"><img onclick ="enemyHit();" draggable="false" src ="Bilder/EM_goblin_1.png" alt ="" class ="enemyPortrait" id ="enemy"></div>
+
+<div id ="shopDiv">
+    <div onclick ="shopOpenClose()" id ="shopOpener"><img draggable="false" onclick="shopOpenClose()" src ="Bilder/Arrow_2.png" alt ="" id ="shopOpenerImage"/></div>
+     <div id ="shop">
+       <h2 style="font-size: 4em; right: 10%;"> Shop:</h2>
+       <div onclick ="shopTypeChanger(event)" id ="shopTypeSelector">
+         <div class ="shopTypeMana" id ="shopTypeMana"><p2>Mana</p2></div>
+         <div class ="shopTypeAttack" id ="shopTypeAttack"><p2>Attack</p2></div>
+       </div>
+       <div onclick ="shopCategoryChanger(event)" class ="shopCategorySelector">
+         <div style="border-right: 5px solid black" id ="shopClick"> <p id ="shopClick"></p></div>
+         <div style="border-right: 5px solid black" id ="shopIdle"><p id ="shopIdle"></p></div>
+         <div id="shopOther"><p id ="shopOther"></p></div>
+       </div>
+   <div id = "shopMana">
+     <div id ="shopManaClick">
+         <div onclick ="manaClickShopItem1.buy()" class="shopItem"><p>Magical finger: Increase mana per click by 1. <br> Cost: <span class ="manaShopText" id ="manaClickShopItem1Cost">10</span> gold.<br> Amount: <span class ="shopText" id = manaClickShopItem1Amount>0</span><br>Total bonus: <span id="manaClickShopItem1TotalBonus">0</span>(<span id ="manaClickShopItem1TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="manaClickShopItem2.buy()" class="shopItem"><p>Magical fingers: Increases mana per click by 5. <br> Cost: <span class ="manaShopText" id ="manaClickShopItem2Cost">75</span> gold.<br> Amount: <span class ="shopText" id = manaClickShopItem2Amount>0</span><br>Total bonus: <span id="manaClickShopItem2TotalBonus">0</span>(<span id ="manaClickShopItem2TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="manaClickShopItem3.buy()" class="shopItem"><p>Magical hand: Increases mana per click by 10. <br> Cost: <span class ="manaShopText" id ="manaClickShopItem3Cost">400</span> gold.<br> Amount: <span class ="shopText" id = manaClickShopItem3Amount>0</span><br>Total bonus: <span id="manaClickShopItem3TotalBonus">0</span>(<span id ="manaClickShopItem3TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="manaClickShopItem4.buy()" class="shopItem"><p>Magical hands: Increases mana per click by 25. <br> Cost: <span class ="manaShopText" id ="manaClickShopItem4Cost">2 000</span> gold.<br> Amount: <span class ="shopText" id = manaClickShopItem4Amount>0</span><br>Total bonus: <span id="manaClickShopItem4TotalBonus">0</span>(<span id ="manaClickShopItem4TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="manaClickShopItem5.buy()" class="shopItem"><p>Magical arm: Increases mana per click by 50. <br> Cost: <span class ="manaShopText" id ="manaClickShopItem5Cost">5 000</span> gold.<br> Amount: <span class ="shopText" id = manaClickShopItem5Amount>0</span><br>Total bonus: <span id="manaClickShopItem5TotalBonus">0</span>(<span id ="manaClickShopItem5TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="manaClickShopItem6.buy()" class="shopItem"><p>Magical arms: Increases mana per click by 100. <br> Cost: <span class ="manaShopText" id ="manaClickShopItem6Cost">12 000</span> gold.<br> Amount: <span class ="shopText" id = manaClickShopItem6Amount>0</span><br>Total bonus: <span id="manaClickShopItem6TotalBonus">0</span>(<span id ="manaClickShopItem6TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="manaClickShopItem7.buy()" class="shopItem"><p>Magical head: Increases mana per click by 200. <br> Cost: <span class ="manaShopText" id ="manaClickShopItem7Cost">25 000</span> gold.<br> Amount: <span class ="shopText" id = manaClickShopItem7Amount>0</span><br>Total bonus: <span id="manaClickShopItem7TotalBonus">0</span>(<span id ="manaClickShopItem7TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="manaClickShopItem8.buy()" class="shopItem"><p>Magical heads: Increases mana per click by 500. <br> Cost: <span class ="manaShopText" id ="manaClickShopItem8Cost">60 000</span> gold.<br> Amount: <span class ="shopText" id = manaClickShopItem8Amount>0</span><br>Total bonus: <span id="manaClickShopItem8TotalBonus">0</span>(<span id ="manaClickShopItem8TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="manaClickShopItem9.buy()" class="shopItem"><p>Magical chest: Increases mana per click by 1 000. <br> Cost: <span class ="manaShopText" id ="manaClickShopItem9Cost">150 000</span> gold.<br> Amount: <span class ="shopText" id = manaClickShopItem9Amount>0</span><br>Total bonus: <span id="manaClickShopItem9TotalBonus">0</span>(<span id ="manaClickShopItem9TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="manaClickShopItem10.buy()" class="shopItem"><p>Magical body: Increases mana per click by 10 000. <br> Cost: <span class ="manaShopText" id ="manaClickShopItem10Cost">1 000 000</span> gold.<br> Amount: <span class ="shopText" id = manaClickShopItem10Amount>0</span><br>Total bonus: <span id="manaClickShopItem10TotalBonus">0</span>(<span id ="manaClickShopItem10TotalBonusPercentage">0</span>%)</div>
+     </div>
+     <div id ="shopManaIdle">
+         <div onclick ="manaIdleShopItem1.buy()" class="shopItem"><p>Magical nisse: Increase mana per second by 1<br> Cost: <span class ="manaShopText" id ="manaIdleShopItem1Cost">25</span> gold.<br> Amount: <span class ="shopText" id="manaIdleShopItem1Amount">0</span><br>Total bonus: <span id="manaIdleShopItem1TotalBonus">0</span>(<span id ="manaIdleShopItem1TotalBonusPercentage">0</span>%)</p></div>
+         <div onclick ="manaIdleShopItem2.buy()" class="shopItem"><p>Magical worker: Increase mana per second by 10<br> Cost: <span class ="manaShopText" id ="manaIdleShopItem2Cost">250</span> gold.<br> Amount: <span class ="shopText" id="manaIdleShopItem2Amount">0</span><br>Total bonus: <span id="manaIdleShopItem2TotalBonus">0</span>(<span id ="manaIdleShopItem2TotalBonusPercentage">0</span>%)</p></div>
+         <div onclick ="manaIdleShopItem3.buy()" class="shopItem"><p>Magical summoner: Increase mana per second by 100<br> Cost: <span class ="manaShopText" id ="manaIdleShopItem3Cost">2 500</span> gold.<br> Amount: <span class ="shopText" id="manaIdleShopItem3Amount">0</span><br>Total bonus: <span id="manaIdleShopItem3TotalBonus">0</span>(<span id ="manaIdleShopItem3TotalBonusPercentage">0</span>%)</p></div>
+         <div onclick ="manaIdleShopItem4.buy()" class="shopItem"><p>Magical warlock: Increase mana per second by 1 000<br> Cost: <span class ="manaShopText" id ="manaIdleShopItem4Cost">25 000</span> gold.<br> Amount: <span class ="shopText" id="manaIdleShopItem4Amount">0</span><br>Total bonus: <span id="manaIdleShopItem4TotalBonus">0</span>(<span id ="manaIdleShopItem4TotalBonusPercentage">0</span>%)</p></div>
+         <div onclick ="manaIdleShopItem5.buy()" class="shopItem"><p>Magical mega-nisse: Increase mana per second by 10 000<br> Cost: <span class ="manaShopText" id ="manaIdleShopItem5Cost">250 000</span> gold.<br> Amount: <span class ="shopText" id="manaIdleShopItem5Amount">0</span><br>Total bonus: <span id="manaIdleShopItem5TotalBonus">0</span>(<span id ="manaIdleShopItem5TotalBonusPercentage">0</span>%)</p></div>
+         <div onclick ="manaIdleShopItem6.buy()" class="shopItem"><p>Magical army: Increase mana per second by 100 000<br> Cost: <span class ="manaShopText" id ="manaIdleShopItem6Cost">2 500 000</span> gold.<br> Amount: <span class ="shopText" id="manaIdleShopItem6Amount">0</span><br>Total bonus: <span id="manaIdleShopItem6TotalBonus">0</span>(<span id ="manaIdleShopItem6TotalBonusPercentage">0</span>%)</p></div>
+         <div onclick ="manaIdleShopItem7.buy()" class="shopItem"><p>Magical dragon: Increase mana per second by 1 000 000<br> Cost: <span class ="manaShopText" id ="manaIdleShopItem7Cost">25 000 000</span> gold.<br> Amount: <span class ="shopText" id="manaIdleShopItem7Amount">0</span><br>Total bonus: <span id="manaIdleShopItem7TotalBonus">0</span>(<span id ="manaIdleShopItem7TotalBonusPercentage">0</span>%)</p></div>
+         <div onclick ="manaIdleShopItem8.buy()" class="shopItem"><p>Magical priest: Increase mana per second by 10 000 000<br> Cost: <span class ="manaShopText" id ="manaIdleShopItem8Cost">250 000 000</span> gold.<br> Amount: <span class ="shopText" id="manaIdleShopItem8Amount">0</span><br>Total bonus: <span id="manaIdleShopItem8TotalBonus">0</span>(<span id ="manaIdleShopItem8TotalBonusPercentage">0</span>%)</p></div>
+         <div onclick ="manaIdleShopItem9.buy()" class="shopItem"><p>Magical king: Increase mana per second by 100 000 000<br> Cost: <span class ="manaShopText" id ="manaIdleShopItem9Cost">2 500 000 000</span> gold.<br> Amount: <span class ="shopText" id="manaIdleShopItem9Amount">0</span><br>Total bonus: <span id="manaIdleShopItem9TotalBonus">0</span>(<span id ="manaIdleShopItem9TotalBonusPercentage">0</span>%)</p></div>
+         <div onclick ="manaIdleShopItem10.buy()" class="shopItem"><p>Magical god-of-all-nisser: Increase mana per second by 1 000 000 000<br> Cost: <span class ="manaShopText" id ="manaIdleShopItem10Cost">25 000 000 000</span> gold.<br> Amount: <span class ="shopText" id="manaIdleShopItem10Amount">0</span><br>Total bonus: <span id="manaIdleShopItem10TotalBonus">0</span>(<span id ="manaIdleShopItem10TotalBonusPercentage">0</span>%)</p></div>
+
+     </div>
+     <div id ="shopManaOther">
+        <div onclick="manaOtherShopItem1.buy()" class="shopItem" id ="manaOtherShopItem1"><p id ="manaOtherShopItem1">Limit break: Increases mana cap.<br> Cost: <span class ="manaShopText" id ="manaOtherShopItem1Cost">1000</span> gold.<br> Total bonus mana cap: <span class ="shopText" id="bonusMaxMana"></span></p></div>
+        <div class="shopItem" id ="clickShopItem2"><p>M</div>
+     </div>
+   </div>
+   <div id="shopAttack">
+        <div id ="shopAttackIdle">
+          <div onclick ="attackIdleShopItem1.buy()" class="shopItem"><p>Automatic finger: Increases your damage per second by 1.<br> Cost: <span class ="manaShopText" id ="attackIdleShopItem1Cost">25</span> gold.<br> Amount: <span class ="shopText" id = attackIdleShopItem1Amount>0</span><br>Total bonus: <span id="attackIdleShopItem1TotalBonus">0</span>(<span id ="attackIdleShopItem1TotalBonusPercentage">0</span>%)</div>
+          <div onclick ="attackIdleShopItem2.buy()" class="shopItem"><p>Automatic fingers: Increases your damage per second by 5. <br> Cost: <span class ="manaShopText" id ="attackIdleShopItem2Cost">250</span> gold.<br> Amount: <span class ="shopText" id = attackIdleShopItem2Amount>0</span><br>Total bonus: <span id="attackIdleShopItem2TotalBonus">0</span>(<span id ="attackIdleShopItem2TotalBonusPercentage">0</span>%)</div>
+          <div onclick ="attackIdleShopItem3.buy()" class="shopItem"><p>Automatic hand: Increases your damage per second by 100. <br> Cost: <span class ="manaShopText" id ="attackIdleShopItem3Cost">2 500</span> gold.<br> Amount: <span class ="shopText" id = attackIdleShopItem3Amount>0</span><br>Total bonus: <span id="attackIdleShopItem3TotalBonus">0</span>(<span id ="attackIdleShopItem3TotalBonusPercentage">0</span>%)</div>
+          <div onclick ="attackIdleShopItem4.buy()" class="shopItem"><p>Automatic hands: Increases your damage per second by 1 000.<br> Cost: <span class ="manaShopText" id ="attackIdleShopItem4Cost">25 000</span> gold.<br> Amount: <span class ="shopText" id = attackIdleShopItem4Amount>0</span><br>Total bonus: <span id="attackIdleShopItem4TotalBonus">0</span>(<span id ="attackIdleShopItem4TotalBonusPercentage">0</span>%)</div>
+          <div onclick ="attackIdleShopItem5.buy()" class="shopItem"><p>Automatic arm: Increases your damage per second by 1 500.<br> Cost: <span class ="manaShopText" id ="attackIdleShopItem5Cost">250 000</span> gold.<br> Amount: <span class ="shopText" id = attackIdleShopItem5Amount>0</span><br>Total bonus: <span id="attackIdleShopItem5TotalBonus">0</span>(<span id ="attackIdleShopItem5TotalBonusPercentage">0</span>%)</div>
+          <div onclick ="attackIdleShopItem6.buy()" class="shopItem"><p>Automatic arms: Increases your damage per second by 2 000.<br> Cost: <span class ="manaShopText" id ="attackIdleShopItem6Cost">2 500 000</span> gold.<br> Amount: <span class ="shopText" id = attackIdleShopItem6Amount>0</span><br>Total bonus: <span id="attackIdleShopItem6TotalBonus">0</span>(<span id ="attackIdleShopItem6TotalBonusPercentage">0</span>%)</div>
+          <div onclick ="attackIdleShopItem7.buy()" class="shopItem"><p>Automatic head: Increases your damage per second by 5 000. <br> Cost: <span class ="manaShopText" id ="attackIdleShopItem7Cost">25 000 000</span> gold.<br> Amount: <span class ="shopText" id = attackIdleShopItem7Amount>0</span><br>Total bonus: <span id="attackIdleShopItem7TotalBonus">0</span>(<span id ="attackIdleShopItem7TotalBonusPercentage">0</span>%)</div>
+          <div onclick ="attackIdleShopItem8.buy()" class="shopItem"><p>Automatic heads; Increases your damage per second by 10 000.<br> Cost: <span class ="manaShopText" id ="attackIdleShopItem8Cost">250 000 000</span> gold.<br> Amount: <span class ="shopText" id = attackIdleShopItem8Amount>0</span><br>Total bonus: <span id="attackIdleShopItem8TotalBonus">0</span>(<span id ="attackIdleShopItem8TotalBonusPercentage">0</span>%)</div>
+          <div onclick ="attackIdleShopItem9.buy()" class="shopItem"><p>Automatic chest: Increases your damage per second by 20 000. <br> Cost: <span class ="manaShopText" id ="attackIdleShopItem9Cost">2 500 000 000</span> gold.<br> Amount: <span class ="shopText" id = attackIdleShopItem9Amount>0</span><br>Total bonus: <span id="attackIdleShopItem9TotalBonus">0</span>(<span id ="attackIdleShopItem9TotalBonusPercentage">0</span>%)</div>
+          <div onclick ="attackIdleShopItem10.buy()" class="shopItem"><p>Automatic body: Increases your damage per second by 40 000.<br> Cost: <span class ="manaShopText" id ="attackIdleShopItem10Cost">25 0000 000 000</span> gold.<br> Amount: <span class ="shopText" id = attackIdleShopItem10Amount>0</span><br>Total bonus: <span id="attackIdleShopItem10TotalBonus">0</span>(<span id ="attackIdleShopItem10TotalBonusPercentage">0</span>%)</div>
+      </div>
+
+        <div id="shopAttackClick">
+         <div onclick ="attackClickShopItem1.buy()" class="shopItem"><p>Hard finger: Increases your damage per click by 1.<br> Cost: <span class ="manaShopText" id ="attackClickShopItem1Cost">25</span> gold.<br> Amount: <span class ="shopText" id = attackClickShopItem1Amount>0</span><br>Total bonus: <span id="attackClickShopItem1TotalBonus">0</span>(<span id ="attackClickShopItem1TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="attackClickShopItem2.buy()" class="shopItem"><p>Hard fingers: Increases your damage per click by 10.<br> Cost: <span class ="manaShopText" id ="attackClickShopItem2Cost">1 000</span> gold.<br> Amount: <span class ="shopText" id = attackClickShopItem2Amount>0</span><br>Total bonus: <span id="attackClickShopItem2TotalBonus">0</span>(<span id ="attackClickShopItem2TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="attackClickShopItem3.buy()" class="shopItem"><p>Hard hand: Increases your damage per click by 100. <br> Cost: <span class ="manaShopText" id ="attackClickShopItem3Cost">250 000</span> gold.<br> Amount: <span class ="shopText" id = attackClickShopItem3Amount>0</span><br>Total bonus: <span id="attackClickShopItem3TotalBonus">0</span>(<span id ="attackClickShopItem3TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="attackClickShopItem4.buy()" class="shopItem"><p>Hard hands: Increases your damage per click by 1 000. <br> Cost: <span class ="manaShopText" id ="attackClickShopItem4Cost">1 000 000</span> gold.<br> Amount: <span class ="shopText" id = attackClickShopItem4Amount>0</span><br>Total bonus: <span id="attackClickShopItem4TotalBonus">0</span>(<span id ="attackClickShopItem4TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="attackClickShopItem5.buy()" class="shopItem"><p>Hard arm: Increases your damage per click by 10 000. <br> Cost: <span class ="manaShopText" id ="attackClickShopItem5Cost">2 000 000</span> gold.<br> Amount: <span class ="shopText" id = attackClickShopItem5Amount>0</span><br>Total bonus: <span id="attackClickShopItem5TotalBonus">0</span>(<span id ="attackClickShopItem5TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="attackClickShopItem6.buy()" class="shopItem"><p>Hard arms: Increases your damage per click by 100 000. <br> Cost: <span class ="manaShopText" id ="attackClickShopItem6Cost">4 000 000</span> gold.<br> Amount: <span class ="shopText" id = attackClickShopItem6Amount>0</span><br>Total bonus: <span id="attackClickShopItem6TotalBonus">0</span>(<span id ="attackClickShopItem6TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="attackClickShopItem7.buy()" class="shopItem"><p>Hard head: Increases your damage per click by 1 000 000. <br> Cost: <span class ="manaShopText" id ="attackClickShopItem7Cost">8 000 000</span> gold.<br> Amount: <span class ="shopText" id = attackClickShopItem7Amount>0</span><br>Total bonus: <span id="attackClickShopItem7TotalBonus">0</span>(<span id ="attackClickShopItem7TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="attackClickShopItem8.buy()" class="shopItem"><p>Hard heads; Increases your damage per click by 10 000 000. <br> Cost: <span class ="manaShopText" id ="attackClickShopItem8Cost">16 000 000</span> gold.<br> Amount: <span class ="shopText" id = attackClickShopItem8Amount>0</span><br>Total bonus: <span id="attackClickShopItem8TotalBonus">0</span>(<span id ="attackClickShopItem8TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="attackClickShopItem9.buy()" class="shopItem"><p>Hard chest: Increases your damage per click by 100 000 000. <br> Cost: <span class ="manaShopText" id ="attackClickShopItem9Cost">32 000 000</span> gold.<br> Amount: <span class ="shopText" id = attackClickShopItem9Amount>0</span><br>Total bonus: <span id="attackClickShopItem9TotalBonus">0</span>(<span id ="attackClickShopItem9TotalBonusPercentage">0</span>%)</div>
+         <div onclick ="attackClickShopItem10.buy()" class="shopItem"><p>Hard body: Increases your damage per click by 1 000 000 000. <br> Cost: <span class ="manaShopText" id ="attackClickShopItem10Cost">64 000 000</span> gold.<br> Amount: <span class ="shopText" id = attackClickShopItem10Amount>0</span><br>Total bonus: <span id="attackClickShopItem10TotalBonus">0</span>(<span id ="attackClickShopItem10TotalBonusPercentage">0</span>%)</div>
+
+      </div>
+        <div id="shopAttackOther">
+          <div class="shopItem"><p>Not yet added.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div id ="playerStats">
+          <p5>Hp: <p5 id = "playerCurrentHP"></p5>/<p5 id ="playerMaxHP"></p5></p5>
+          <img src="Bilder/playerIcon1.png" alt="" class="playerIcon" id ="playerIcon"/>
+      </div>
+              <img onclick ="orbClick()" draggable="false" src="Bilder/Orb1.png" alt="" class="orb" id ="orb"/>
+
+    <div id ="spellDiv">
+      <div onclick="spellOpenClose()" id ="spellOpener"><img draggable="false" onclick="spellOpenClose()" src ="Bilder/Arrow_2.png" alt ="" id ="spellOpenerImage"/></div>
+      <div id ="spells">
+        <h2 style = "font-size: 4em; right: 6%"> Spells:</h2>
+        <div onclick ="spellItem1.cast()" class ="spellItem"><p style ="z-index: 2">Wind Current: Strike with the wind!<br>Damage: <span id="spellItem1Effect">150% of mana + 10</span><span id="spellItem1Cost"></span></p><div id ="spellItem1Wrapper" class ="spellItemWrapper" style ="background-color: rgba(255,0,0,0.5);"></div></div>
+        <div onclick ="spellItem2.cast()" class ="spellItem"><p style ="z-index: 2">Incinerate: Cast a burning fireball!<br>Damage: <span id="spellItem2Effect">100% of mana</span> +<span id="spellItem2StatusEffectDamageId">10% of mana</span>/s<br> status effect duration: <span id="spellItem2StatusEffectDurationId">10</span>s.</p><div id ="spellItem2Wrapper" class ="spellItemWrapper" style ="background-color: rgba(255,0,0,0.5);"></div></div>
+        <br>
+        <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2> hi</h2>
+      </div>
+    </div>
+
+
+    <div class ="enemyStats"><p> Enemy hp:<span id ="enemyHP"></span>/<span id ="enemyMaxHP"></span><br>
+        <p>Enemy level:<span id ="enemyCurrentLevel"> 1</span></p></div>
+     <div class ="console" id ="console">
+       <p id="consoleOutput"></p>
+     </div>
+  </body>
+</html>

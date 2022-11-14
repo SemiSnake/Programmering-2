@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+:root {
+	--white:#f1f1f1
+}
+
+body {
+  margin: 0;
+  background-image: url("Bilder/snow-icegif-29 (1).gif");
+  background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1 {
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 100px;
+  color: red;
+  position: relative;
+  bottom: 75px;
+}
+
+h2 {
+	font-size: 30px;
+	margin-left: 30px;
+	text-align: left;
+	position: relative;
+}
+p {
+  text-align: center;
+	margin-bottom: 10px;
+
+}
+p3 {
+	font-size: 50px;
+}
+p2 {
+	font-size: 80px;
+	color: red;
+	text-shadow: 2px 2px black;
+	margin-left: 40px;
+	position: relative;
+	bottom: 10px;
+}
+#menykonteiner1 {
+		background-color: rgba(0, 0, 0, 0.6);
+		border: 5px dashed green;
+		text-align: center;
+		height: 150px;
+    margin-bottom: 30px;
+
+}
+
+.overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	width: 100%;
+	height: 154.6%;
+	z-index: 1;
+	display: none;
+}
+
+
+.julehatt {
+	position: fixed;
+	bottom: 610px;
+	right: 59px;
+	width: 100px;
+	height: 132.5px;
+	z-index: 3;
+	display: none;
+	opacity: 100%;
+	animation: juleHatt 3s;
+}
+
+@keyframe juleHatt{
+	from {opacity: 0%;}
+	to {opacity: 100%;}
+}
+#content {
+	position: fixed;
+	width: 1350px;
+	height: 675px;
+	margin-left: -675px;
+	margin-top: -350px;
+	top:52%;
+	left:49.5%;
+	background-color: #ccc;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	z-index: 2;
+	animation: floatDown 2s;
+}
+
+@keyframes floatDown{
+	from {top: 0%;}
+	to {top: 52%;}
+}
+
+.grid-container {
+  background-color: rgba(0, 80, 0, 0.9);
+  border: 5px solid black;
+  grid-gap: 40px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  padding: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+	position: relative;
+  margin-bottom: 30px;
+}
+
+.item1 {
+	background-image: url("Bilder/julegave.png");
+	background-size: cover;
+  height: 150px;
+  width: 180px;
+  font-size: 50px;
+	transition-duration: 0.4s;
+
+}
+
+.item1:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+
+}
+
+.item2 {
+  border: 3px solid black;
+  background-color: rgba(128, 0, 0, 1);
+  height: 150px;
+  width: 180px;
+  font-size: 50px;
+  text-align: center;
+
+}
